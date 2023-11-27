@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tekton-flux
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: tekton-flux-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: tekton-flux-app
+    spec:
+      containers:
+        - name: tekton-flux-app
+          image: mhussain78/tekton-flux-demo:0.0.1
+          ports:
+            - containerPort: 8085
