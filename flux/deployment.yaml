@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: tekton-flux-app
-          image: mhussain78/tekton-flux-demo:0.0.5
+          image: mhussain78/tekton-flux-demo:0.0.6
           ports:
             - containerPort: 8085
           env:
