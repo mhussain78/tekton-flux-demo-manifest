@@ -18,3 +18,9 @@ spec:
           image: mhussain78/tekton-flux-demo:0.0.5
           ports:
             - containerPort: 8085
+          env:
+            - name: MARIADB_SERVER_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: mariadb-configmap
+                  key: database_url
